@@ -11,7 +11,7 @@ const Footer = () => {
                             © <script>
                                 document.write(new Date().getFullYear())
                             </script>2022,
-                            made with <i class="fa fa-heart"></i> by
+                            made with <i className="fa fa-heart"></i> by
                             <a href="#https://www.creative-tim.com" className="font-weight-bold" target="_blank">Creative Tim</a>
                             for a better web.
                         </div>

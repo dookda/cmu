@@ -1,9 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai&family=Kanit&display=swap');
 
-/* body{
-    font-family: 'IBM Plex Sans Thai', sans-serif;
-    font-family: 'Kanit', sans-serif;
-} */
+/* @import '~leaflet/dist/leaflet.css'; */
 
 body {
     margin: 0;
@@ -21,4 +18,14 @@ body {
 .card .card-body {
     font-family: 'IBM Plex Sans Thai', sans-serif;
     padding: 1.5rem;
+}
+
+.mb-5{
+    margin-bottom: 2px !important;
+}
+
+.leaflet-container {
+    height: 600px;
+    width: 100%;
+    border-radius: 15px;
 }

@@ -1,29 +1,22 @@
-import Header from './Header/Header';
-import Footer from './Footer/Footer';
-import './assets/css/soft-ui-dashboard.min.css'
-import './Style.css'
-
-import Card from './Card/Card';
+import React from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import './assets/css/soft-ui-dashboard.min.css';
+import './Style.css';
+import PageHome from './PageHome/PageHome';
+import PageProfile from './PageProfile/PageProfile';
+import PageSurvey from './PageSurvey/PageSurvey';
 
 function App() {
   return (
-    <div className='container'>
-      <Header />
-      <div className="container-fluid py-4">
-        <div class="row">
-          <Card name="salda" />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-          <Card />
-        </div>
-      </div>
-      <Footer />
+    <div>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<PageHome />} />
+          <Route path="Home" element={<PageHome />} />
+          <Route path="Survey" element={<PageSurvey />} />
+          <Route path="Profile" element={<PageProfile />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

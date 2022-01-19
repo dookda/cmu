@@ -4,7 +4,7 @@ import './../Style.css'
 
 const Card = (props) => {
     return (
-        <div className="col-xl-3 col-sm-6 mb-xl-0 mb-4 f">
+        <div className="col-xl-3 col-sm-6 mb-xl-0 mb-5 f">
             <div className="card">
                 <div className="card-body p-3">
                     <div className="row">
