@@ -4,6 +4,7 @@ import './../Style.css';
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import Card from "../Card/Card";
+import Form from "../Form/Form"
 
 const Home = () => {
     return (
@@ -11,8 +12,10 @@ const Home = () => {
             <Header name="หน้าหลัก" />
             <div className="container-fluid py-4">
                 <div className="row">
+                    <Form />
+                </div>
+                <div className="row">
                     <Card name="salda" />
-                    <Card />
                     <Card />
                     <Card />
                     <Card />

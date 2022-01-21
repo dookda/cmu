@@ -1,0 +1,4 @@
+#create image
+docker build --tag node-express .
+#run container
+docker run --name nodeexps -it -v $(pwd)/service/:/mnt/nodejs/service/ -p 5100:5100 nodejs-express
