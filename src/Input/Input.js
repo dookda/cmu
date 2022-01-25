@@ -11,7 +11,7 @@ const Input = ({ addPost, name, label, type }) => {
         let obj = {};
         obj[label] = type === "number" ? Number(e.target.value) : e.target.value;
         addPost(obj);
-        setInput('');
+        // setInput('');
     }
 
     return (
