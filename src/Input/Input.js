@@ -1,25 +1,26 @@
 import { useState } from 'react';
 import './../assets/css/soft-ui-dashboard.min.css';
 
-const Input = ({ addPost, name }) => {
-    const [data, setData] = useState("");
-
+const Input = ({ addPost, name, label, type }) => {
+    const [input, setInput] = useState("");
     const onChange = (e) => {
-        setData(e.target.value);
+        setInput(e.target.value);
     }
 
     const onBlur = (e) => {
-        const newData = e.target.value;
-        addPost(newData)
+        let obj = {};
+        obj[label] = type === "number" ? Number(e.target.value) : e.target.value;
+        addPost(obj);
+        setInput('');
     }
 
     return (
         <form >
             <label>{name}</label>
             <div className="mb-3">
-                <input type="text" className="form-control"
+                <input type={type} className="form-control"
                     placeholder={name}
-                    value={data}
+                    value={input}
                     onChange={onChange}
                     onBlur={onBlur} />
             </div>

@@ -6,18 +6,21 @@ const Button = () => {
     const [post, setPost] = useState([])
 
     const addPost = (data) => {
-        const newPost = { data }
+        const newPost = data
         setPost([newPost, ...post])
     }
 
     const handleClick = (data) => {
         console.log(post);
+
+        setPost('')
     }
+
     return (
         <div>
-            <Input
-                name="กรอกชื่อ"
-                addPost={addPost} />
+            <Input type="text" name="กรอกชื่อ" label="name" addPost={addPost} />
+            <Input type="text" name="นามสกุล" label="survey" addPost={addPost} />
+            <Input type="number" name="รหัสนักศึกษา" label="stdcode" addPost={addPost} />
             <div className="text-center">
                 <button type="button"
                     className="btn bg-gradient-info mt-4 mb-0"
