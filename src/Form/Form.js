@@ -17,6 +17,10 @@ const Button = () => {
         })
     }
 
+    const onClick = () => {
+        console.log("dd");
+    }
+
     const handleClick = () => {
         console.log(post);
         getApi(post)
@@ -25,9 +29,9 @@ const Button = () => {
 
     return (
         <div>
-            <Input type="text" name="ชื่อ-นามสกุล" label="username" addPost={addPost} />
-            <Input type="text" name="email" label="email" addPost={addPost} />
-            <Input type="number" name="รหัสนักศึกษา" label="stdcode" addPost={addPost} />
+            <Input type="text" name="ชื่อ-นามสกุล" label="username" addPost={addPost} onClick={onClick} />
+            <Input type="text" name="email" label="email" addPost={addPost} onClick={onClick} />
+            <Input type="number" name="รหัสนักศึกษา" label="stdcode" addPost={addPost} onClick={onClick} />
             <div className="text-center">
                 <button type="button"
                     className="btn bg-gradient-info mt-4 mb-0"
